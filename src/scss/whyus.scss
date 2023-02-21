@@ -1,0 +1,48 @@
+.whyus {
+    // .whyus__container
+
+    &__container {
+    }
+
+    // .whyus__body
+
+    &__body {
+        ol {
+            @media (min-width: 769px) {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+
+            & > :not(:last-child) {
+                @include adaptive-value("margin-bottom", 40, 20, 1);
+            }
+
+            li {
+                width: 100%;
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+
+                @media (min-width: 769px) {
+                    max-width: calc(50% - 20px);
+                }
+
+                p {
+                    font-weight: 400;
+                    @include adaptive-value("font-size", 20, 14, 1);
+                    color: $color;
+                }
+
+                img {
+                    flex-grow: 0;
+                    flex-shrink: 0;
+                    @include adaptive-value("width", 50, 15, 1);
+                    @include adaptive-value("flex-basis", 50, 15, 1);
+                    @include adaptive-value("height", 75, 22, 1);
+                    @include adaptive-value("margin-right", 30, 10, 1);
+                }
+            }
+        }
+    }
+}

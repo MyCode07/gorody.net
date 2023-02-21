@@ -1,0 +1,29 @@
+.uchastki {
+    // .uchastki__container
+
+    &__container {
+    }
+
+    // .uchastki__body
+
+    &__body {
+    }
+
+    // .uchastki__flex
+
+    &__flex {
+        // .uchastki__flex-count
+
+        &-count {
+            font-weight: 400;
+            @include adaptive-value("font-size", 22, 14, 1);
+            color: $color;
+            margin-bottom: 30px;
+            display: block;
+
+            label {
+                font-weight: 600;
+            }
+        }
+    }
+}

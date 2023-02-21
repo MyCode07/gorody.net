@@ -1,0 +1,247 @@
+@@include('./html/header.html',{
+"title": 'Квартиры'
+})
+<main>
+    @@include('./html/banner.html',{
+    "title": 'Квартиры',
+    "image": 'img/kvartiri.png'
+    })
+
+    <div class="breadcamps">
+        <div class="_container">
+            <ul>
+                <li>
+                    <a href="">
+                        <span>Главная</span>
+                    </a>
+                    <svg viewBox="0 0 7 12">
+                        <path
+                            d="M6.57632 6.57616C6.89408 6.25796 6.89408 5.74204 6.57632 5.42384L1.39091 0.238644C1.07271 -0.0795479 0.556847 -0.0795479 0.238649 0.238644C-0.0795495 0.556831 -0.0795495 1.07272 0.238649 1.39091L4.84774 6L0.238649 10.6091C-0.0795495 10.9273 -0.0795495 11.4432 0.238649 11.7614C0.556847 12.0795 1.07271 12.0795 1.39091 11.7614L6.57632 6.57616Z" />
+                    </svg>
+                </li>
+                <li>
+                    <span>Квартиры</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="kotedj">
+        <div class="kotedj__container _container">
+            <div class="kotedj__body">
+                <div class="_textblock">
+                    <h3 class="_textblock-title">ССОВРЕМЕННАЯ КВАРТИРА СРЕДИ ХВОЙНЫХ ДЕРЕВЬЕВ – ЭТО РЕАЛЬНО</h3>
+                    <p class="_textblock-text">Мечтаете о квартире в окружении леса, которая находится недалеко от
+                        города? С «ПулЭкспресс» это реально.
+                        <br><br>
+                        Хватить жить в загрязненном городе. Вы заслуживаете лучшего! Единение с природой, современные
+                        технологии, удобные для
+                        проживания квартиры, развитая инфраструктура – малоэтажные жилые комплексы предоставят эти и
+                        другие преимущества.
+                    </p>
+                </div>
+
+                <div class="filter">
+                    <div class="filter__top">
+                        <h4>Фильтр</h4>
+                        <button class="open-filter">
+                            <img class="open" src="img/svg/filter.svg" alt="">
+                            <img class="close" src="img/svg/close-filter.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="filter__body">
+                        <div class="filter__items">
+                            <div class="filter__item filter__item-select">
+                                <span>Район</span>
+                                <select name="Район">
+                                    <option value="" selected disabled hidden>Выберите район</option>
+                                    <option value="Район-1">Район</option>
+                                    <option value="Район-2">Район-2</option>
+                                </select>
+                            </div>
+                            <div class="filter__item filter__item-diapason">
+                                <span>Площадь квартиры (м2)</span>
+                                <div>
+                                    <label>
+                                        от
+                                        <input name="square-kvartira-min" type="number" min="5" max="100"
+                                            placeholder="5">
+                                    </label>
+                                    <label>
+                                        до
+                                        <input name="square-kvartira-max" type="number" min="5" max="100"
+                                            placeholder="100">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filter__item filter__item-select">
+                                <span>Комнаты</span>
+                                <select name="Комнаты">
+                                    <option value="" selected disabled hidden>Выберите количество</option>
+                                    <option value="1-комнатная-">1 комнатная</option>
+                                    <option value="2-комнатная-">2 комнатная</option>
+                                </select>
+                            </div>
+                            <div class="filter__item filter__item-diapason">
+                                <span>Стоимость, (руб.)</span>
+                                <div>
+                                    <label>
+                                        от
+                                        <input name="square-kvartira-min" type="number" min="1000000" max="10000000"
+                                            placeholder="1000000">
+                                    </label>
+                                    <label>
+                                        до
+                                        <input name="square-kvartira-max" type="number" min="1000000" max="10000000"
+                                            placeholder="10000000">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="filter__seaech">Найти</button>
+                    </div>
+                    <div class="filter__results">
+                        <span class="filter__results-count">
+                            <span>Квартир найдено <label>3</label></span>
+                            <button class="filter__reset _underline">Сбросить филтры</button>
+                        </span>
+                        <ol class="post-list">
+                            <li>
+                                <div class="post-list__img">
+                                    <a href="">
+                                        <img src="img/kvartira.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="post-list__info">
+                                    <p><a href="" class="_underline">Мелодия</a> <label> 5 000 0000 рублей</label></p>
+                                    <p>Площадь квартиры<span>70 м<sup>2</sup></span></p>
+                                    <p>Количесво комнат<span>4</span></p>
+                                    <p>Расположение<span>Всеволожский район</span></p>
+                                    <p>Расстояние до КАД<span>120 км</span></p>
+                                    <p>Сроки сдачи<span>1 кв. 2023 г.</span></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="post-list__img">
+                                    <a href="">
+                                        <img src="img/kvartira.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="post-list__info">
+                                    <p><a href="" class="_underline">Мелодия</a> <label> 5 000 0000 рублей</label></p>
+                                    <p>Площадь квартиры<span>70 м<sup>2</sup></span></p>
+                                    <p>Количесво комнат<span>4</span></p>
+                                    <p>Расположение<span>Всеволожский район</span></p>
+                                    <p>Расстояние до КАД<span>120 км</span></p>
+                                    <p>Сроки сдачи<span>1 кв. 2023 г.</span></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="post-list__img">
+                                    <a href="">
+                                        <img src="img/kvartira.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="post-list__info">
+                                    <p><a href="" class="_underline">Мелодия</a> <label> 5 000 0000 рублей</label></p>
+                                    <p>Площадь квартиры<span>70 м<sup>2</sup></span></p>
+                                    <p>Количесво комнат<span>4</span></p>
+                                    <p>Расположение<span>Всеволожский район</span></p>
+                                    <p>Расстояние до КАД<span>120 км</span></p>
+                                    <p>Сроки сдачи<span>1 кв. 2023 г.</span></p>
+                                </div>
+                            </li>
+
+
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="_textblock">
+                    <h3 class="_textblock-title">КВ ЧЕМ ВЫГОДА ПРЕДЛОЖЕНИЯ</h3>
+                    <p class="_textblock-text">
+                        Думаете, стоит ли покупать квартиру? Подумайте, что для вас будет лучше: жить в сером городе, в
+                        котором шумно, тяжело
+                        дышать и опасно гулять вечерами или купить квартиру (Ленинградская область) среди деревьев,
+                        неподалеку от водоема и в 5
+                        минутах езды от КАД? Ответ очевиден.
+                        <br><br>
+                        Забудьте о стереотипе, что вам придется жить в деревне, где нет цивилизации. В районе поселка
+                        находятся:
+                    </p>
+
+                    <ol class="_textblock-list">
+                        <li>
+                            <img src="img/svg/ok.svg" alt="">
+                            <p>музеи и центры искусства</p>
+                        </li>
+                        <li>
+                            <img src="img/svg/ok.svg" alt="">
+                            <p>школы</p>
+                        </li>
+                        <li>
+                            <img src="img/svg/ok.svg" alt="">
+                            <p>медицинские центры</p>
+                        </li>
+                        <li>
+                            <img src="img/svg/ok.svg" alt="">
+                            <p>горнолыжные курорты</p>
+                        </li>
+                        <li>
+                            <img src="img/svg/ok.svg" alt="">
+                            <p>дошкольные учреждения и т. д</p>
+                        </li>
+                    </ol>
+
+                    <p class="_textblock-text">Все квартиры обладают налаженной системой необходимых коммуникаций.</p>
+                </div>
+
+                <div class="_textblock">
+                    <h3 class="_textblock-title">МАЛОЭТАЖНЫЕ ЖИЛЫЕ КОМПЛЕКСЫ: УСПЕЙТЕ ПРИОБРЕСТИ</h3>
+                    <p class="_textblock-text">
+                        Количество квартир ограничено, успейте сделать заказ и получить свое жилище. Больше половины
+                        квартир раскупаются на
+                        стадии строительства жилых комплексов. Обусловлено это тем, что покупатели получают:
+                    </p>
+
+                    <ol class="_textblock-list">
+                        <li>
+                            <img src="img/svg/ok.svg" alt="">
+                            <p>Квартиры, которые соответствуют европейским нормам и российским стандартам строительства,
+                                обладают прочностью и
+                                долговечностью.</p>
+                        </li>
+                        <li>
+                            <img src="img/svg/ok.svg" alt="">
+                            <p>Современные коммуникационные системы, благодаря чему у обладателей не возникает проблем с
+                                их использованием.</p>
+                        </li>
+                        <li>
+                            <img src="img/svg/ok.svg" alt="">
+                            <p>Возможность отдохнуть на террасе (владельцы квартир на первом этаже).</p>
+                        </li>
+                        <li>
+                            <img src="img/svg/ok.svg" alt="">
+                            <p>Возможность насытиться свежим воздухом и погулять по лесу.</p>
+                        </li>
+                    </ol>
+
+
+                </div>
+
+                <div class="_textblock">
+                    <h3 class="_textblock-title">ЦЕНЫ ОТ 3 471 000 РУБ.!</h3>
+                    <p class="_textblock-text">
+                        Звоните по указанным номерам или закажите обратный звонок бесплатно и воспользуйтесь
+                        консультациями специалистов в
+                        Санкт-Петербурге.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @@include('./html/advantages-block.html')
+
+</main>
+@@include('./html/footer.html')

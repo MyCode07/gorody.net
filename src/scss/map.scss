@@ -1,0 +1,23 @@
+.map {
+    // .map__container
+
+    &__container {
+    }
+
+    // .map__body
+
+    &__body {
+    }
+
+    // .map__map
+
+    &__map {
+        img,
+        iframe {
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            @include adaptive-value("height", 600, 400, 1);
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.breadcamps {
+    @include adaptive-value("margin-bottom", 75, 50, 1);
+
+    ul {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        li {
+            color: #666666;
+            @include adaptive-value("font-size", 20, 14, 1);
+            font-weight: 500;
+
+            svg {
+                @include adaptive-value("margin-inline", 15, 10, 1);
+                fill: $green;
+                @include adaptive-value("height", 12, 8, 1);
+            }
+
+            a {
+                color: $green;
+            }
+        }
+    }
+}

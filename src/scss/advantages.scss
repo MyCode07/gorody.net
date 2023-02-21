@@ -1,0 +1,183 @@
+.advantages {
+    // .advantages__container
+
+    &__container {
+    }
+
+    // .advantages__body
+
+    &__body {
+    }
+
+    // .advantages__flex
+
+    &__flex {
+        position: relative;
+        background-color: rgba($color: $background, $alpha: 0.5);
+        @include adaptive-value("padding-top", 160, 80, 1);
+        @include adaptive-value("padding-bottom", 140, 100, 1);
+
+        ol {
+            display: flex;
+
+            @media (max-width: 768px) {
+                display: block;
+            }
+
+            & > :not(:last-child) {
+                @media (min-width: 769px) {
+                    @include adaptive-value("margin-right", 40, 0, 1);
+                }
+
+                @media (max-width: 768px) {
+                    margin-bottom: 85px;
+                }
+            }
+
+            & > :first-child {
+                @media (min-width: 769px) {
+                    max-width: 400px;
+                    @include adaptive-value("height", 200, 100, 1);
+                }
+
+                @media (max-width: 768px) {
+                    @include adaptive-value("height", 200, 160, 1);
+                }
+
+                span {
+                    @media (min-width: 769px) {
+                        @include adaptive-value("padding-left", 20, 10, 1);
+                    }
+                }
+            }
+
+            & > :nth-child(2) {
+                @media (min-width: 769px) {
+                    max-width: 453px;
+                    @include adaptive-value("height", 260, 140, 1);
+                }
+
+                @media (max-width: 768px) {
+                    @include adaptive-value("height", 260, 180, 1);
+                }
+
+                span {
+                    @media (min-width: 769px) {
+                        @include adaptive-value("padding-left", 40, 20, 1);
+                    }
+                }
+            }
+
+            & > :last-child {
+                @media (min-width: 769px) {
+                    max-width: 506px;
+                    @include adaptive-value("height", 320, 160, 1);
+                }
+
+                @media (max-width: 768px) {
+                    @include adaptive-value("height", 320, 200, 1);
+                }
+
+                span {
+                    @media (min-width: 769px) {
+                        @include adaptive-value("padding-left", 80, 40, 1);
+                    }
+                }
+            }
+
+            li {
+                border: 6px solid #fff;
+                border-top: 0;
+                width: 100%;
+                position: relative;
+                @include adaptive-value("padding", 40, 20, 1);
+
+                @media (max-width:768px){
+                    display: flex;
+                    align-items: center;
+                    
+                }
+
+                span {
+                    font-weight: 700;
+                    color: #fff;
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: -6px;
+                    transform: translate(0, -73%);
+                    width: calc(100% + 12px);
+                    overflow: hidden;
+
+                    @media (min-width: 769px) {
+                        @include adaptive-value("font-size", 90, 40, 1);
+                    }
+
+                    @media (max-width: 768px) {
+                        @include adaptive-value("font-size", 90, 60, 1);
+
+                        padding-left: 20px;
+                    }
+
+                    i {
+                        font-style: normal;
+                        width: fit-content;
+                        position: relative;
+
+                        &:before,
+                        &:after {
+                            position: absolute;
+                            content: "";
+                            bottom: 22%;
+                            height: 6px;
+
+                            background-color: #fff;
+                        }
+
+                        &:before {
+                            width: 140px;
+                            left: -6px;
+                            transform: translate(-100%, 0);
+                        }
+
+                        &:after {
+                            width: 700px;
+                            right: 0;
+                            transform: translate(100%, 0);
+
+                        }
+                    }
+                }
+
+                label {
+                    display: block;
+                    font-weight: 400;
+                    color: #fff;
+
+                    @media (min-width: 769px) {
+                        @include adaptive-value("font-size", 45, 20, 1);
+                    }
+
+                    @media (max-width: 768px) {
+                        @include adaptive-value("font-size", 45, 30, 1);
+                    }
+                }
+            }
+        }
+
+        img.background {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+
+            @media (max-width:768px){
+                object-position: right;
+            }
+        }
+    }
+}

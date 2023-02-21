@@ -1,0 +1,256 @@
+@@include('./html/header.html',{
+"title": 'Коттеджи'
+})
+<main>
+
+    @@include('./html/banner.html',{
+    "title": 'коттеджи',
+    "image": 'img/kottedji.png'
+    })
+
+    <div class="breadcamps">
+        <div class="_container">
+            <ul>
+                <li>
+                    <a href="">
+                        <span>Главная</span>
+                    </a>
+                    <svg viewBox="0 0 7 12">
+                        <path
+                            d="M6.57632 6.57616C6.89408 6.25796 6.89408 5.74204 6.57632 5.42384L1.39091 0.238644C1.07271 -0.0795479 0.556847 -0.0795479 0.238649 0.238644C-0.0795495 0.556831 -0.0795495 1.07272 0.238649 1.39091L4.84774 6L0.238649 10.6091C-0.0795495 10.9273 -0.0795495 11.4432 0.238649 11.7614C0.556847 12.0795 1.07271 12.0795 1.39091 11.7614L6.57632 6.57616Z" />
+                    </svg>
+                </li>
+                <li>
+                    <span>Коттеджи</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <section class="kotedj">
+        <div class="kotedj__container _container">
+            <div class="kotedj__body">
+                <div class="_textblock">
+                    <h3 class="_textblock-title">СВОЙ ДОМ, СВОЯ ЗЕМЛЯ - ВОПЛОЩАЙТЕ МЕЧТЫ
+                        В РЕАЛЬНОСТЬ</h3>
+                    <p class="_textblock-text">Вы хотите, чтобы ваши дети и вы сами были здоровыми? Вам надоело жить в
+                        загрязненном городе и дышать выхлопными газами?
+                        Мечтаете о роскошном загородном доме? Если да, компания «Gorody.net» в Санкт-Петербурге к вашим
+                        услугам.
+                    </p>
+                </div>
+
+                <div class="filter">
+                    <div class="filter__top">
+                        <h4>Фильтр</h4>
+                        <button class="open-filter">
+                            <img class="open" src="img/svg/filter.svg" alt="">
+                            <img class="close" src="img/svg/close-filter.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="filter__body">
+                        <div class="filter__items">
+                            <div class="filter__item filter__item-select">
+                                <span>Район</span>
+                                <select name="Район">
+                                    <option value="" selected disabled hidden>Выберите район</option>
+                                    <option value="Район-1">Район</option>
+                                    <option value="Район-2">Район-2</option>
+                                </select>
+                            </div>
+                            <div class="filter__item filter__item-diapason">
+                                <span>Площадь дома (м2)</span>
+                                <div>
+                                    <label>
+                                        от
+                                        <input name="square-house-min" type="number" min="5" max="100" placeholder="5">
+                                    </label>
+                                    <label>
+                                        до
+                                        <input name="square-house-max" type="number" min="5" max="100"
+                                            placeholder="100">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filter__item filter__item-diapason">
+                                <span>Площадь участка (сот.)</span>
+                                <div>
+                                    <label>
+                                        от
+                                        <input name="square-uchastok-min" type="number" min="5" max="100"
+                                            placeholder="5">
+                                    </label>
+                                    <label>
+                                        до
+                                        <input name="square-uchastok-max" type="number" min="5" max="100"
+                                            placeholder="100">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filter__item filter__item-diapason">
+                                <span>Стоимость, (руб.)</span>
+                                <div>
+                                    <label>
+                                        от
+                                        <input name="square-uchastok-min" type="number" min="1000000" max="10000000"
+                                            placeholder="1000000">
+                                    </label>
+                                    <label>
+                                        до
+                                        <input name="square-uchastok-max" type="number" min="1000000" max="10000000"
+                                            placeholder="10000000">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="filter__seaech">Найти</button>
+                    </div>
+                    <div class="filter__results">
+                        <span class="filter__results-count">
+                            <span>Коттеджей найдено <label>3</label></span>
+                            <button class="filter__reset _underline">Сбросить филтры</button>
+                        </span>
+                        <ol class="post-list list-kottedji">
+                            <li>
+                                <div class="post-list__img">
+                                    <a href="">
+                                        <img src="img/kottedj.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="post-list__info">
+                                    <p><a href="" class="_underline">Снетково</a></p>
+                                    <label>50 000 000 рублей</label>
+                                    <p>Площадь участка <span> сот.</span></p>
+                                    <p>Площадь дома <span>200 м<sup>2<sup></span></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="post-list__img">
+                                    <a href="">
+                                        <img src="img/kottedj.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="post-list__info">
+                                    <p><a href="" class="_underline">Снетково</a></p>
+                                    <label>50 000 000 рублей</label>
+                                    <p>Площадь участка <span> сот.</span></p>
+                                    <p>Площадь дома <span>200 м<sup>2<sup></span></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="post-list__img">
+                                    <a href="">
+                                        <img src="img/kottedj.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="post-list__info">
+                                    <p><a href="" class="_underline">Снетково</a></p>
+                                    <label>50 000 000 рублей</label>
+                                    <p>Площадь участка <span> сот.</span></p>
+                                    <p>Площадь дома <span>200 м<sup>2<sup></span></p>
+                                </div>
+                            </li>
+
+                        </ol>
+                    </div>
+                </div>
+
+
+                <div class="_textblock">
+                    <h3 class="_textblock-title">КАК ПОКУПКА ДОМА В КОТТЕДЖНЫХ ПОСЕЛКАХ ПОВЛИЯЕТ НА ВАШУ ЖИЗНЬ</h3>
+                    <p class="_textblock-text">
+                        Вспомните любые выходные в городе. Вы выходите на улицу, чтобы погулять с близкими. Вместо
+                        спокойствия и девственной
+                        природы вас окружают сотни машин, шум, загрязненный от выхлопных газов и производств воздух,
+                        вокруг одни высотки и ни
+                        одного дерева или водоема. Не очень приятно, правда? Исследования английских ученых позволили
+                        сделать вывод:
+                        загрязненный воздух стоит на втором месте после курения среди причин преждевременной смерти.
+                        <br><br>
+                        Теперь представьте свою жизнь в коттеджном поселке:
+                    </p>
+
+                    <ol class="_textblock-list">
+                        <li>
+                            <img src="img/svg/ok.svg" alt="">
+                            <p>свежий и чистый воздух</p>
+                        </li>
+                        <li>
+                            <img src="img/svg/ok.svg" alt="">
+                            <p>окружение природой</p>
+                        </li>
+                        <li>
+                            <img src="img/svg/ok.svg" alt="">
+                            <p>чистый водоем неподалеку</p>
+                        </li>
+                        <li>
+                            <img src="img/svg/ok.svg" alt="">
+                            <p>изобилие деревьев</p>
+                        </li>
+                        <li>
+                            <img src="img/svg/ok.svg" alt="">
+                            <p>домашние ягоды и фрукты</p>
+                        </li>
+                        <li>
+                            <img src="img/svg/ok.svg" alt="">
+                            <p>активные игры у дома</p>
+                        </li>
+                        <li>
+                            <img src="img/svg/ok.svg" alt="">
+                            <p>идеальное здоровье и самочувствие</p>
+                        </li>
+                    </ol>
+
+                    <p class="_textblock-text">Приобретя дом в «ПулЭкспресс», вы не только воспользуетесь этими
+                        преимуществами, но и получите
+                        дом своей мечты. Большие
+                        и маленькие, коттеджи в коттеджных поселках к вашим услугам.</p>
+                </div>
+
+                <div class="_textblock">
+                    <h3 class="_textblock-title">ВЫ ЦЕНИТЕ СВОЮ ЖИЗНЬ? ТОГДА ВЫБИРАЙТЕ ЛУЧШЕЕ</h3>
+                    <p class="_textblock-text">
+                        Сделайте выбор в пользу «Gorody,net», и вы получите
+                    </p>
+
+                    <ol class="_textblock-list">
+                        <li>
+                            <img src="img/svg/ok.svg" alt="">
+                            <p>экологически чистый дом (из дерева, каркаса, газобетона или кирпича)</p>
+                        </li>
+                        <li>
+                            <img src="img/svg/ok.svg" alt="">
+                            <p>многофункциональный коттедж (сможете принимать гостей, организовывать застолья, работать,
+                                отдыхать, проводить выходные
+                                или жить постоянно)</p>
+                        </li>
+                        <li>
+                            <img src="img/svg/ok.svg" alt="">
+                            <p>удобное расположение дома (Ленинградская область, недалеко от города, Энколово,
+                                Кузьмолово, Всеволожска)</p>
+                        </li>
+                        <li>
+                            <img src="img/svg/ok.svg" alt="">
+                            <p>жилище под ключ (с полноценными системами водо- и электроснабжения)</p>
+                        </li>
+                    </ol>
+                    <p class="_textblock-text">Цены на коттеджи в коттеджных поселках не маленькие (от 3 950 090 руб.),
+                        но может ли полноценный дом, с уникальным
+                        дизайном, в окружении природы, построенный в соответствии с нормами СНиП 2.08.01-89, СниП
+                        2.02.01-83,СниП II-25-80 и др.
+                        стоит дешево?
+                        <br><br>
+                        Купить коттедж – значит почувствовать жизнь на полную. Закажите обратный звонок или оставьте
+                        заявку по конкретному дому.
+                        Наши сотрудники с вами свяжутся и проконсультируют по всем вопросам.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @@include('./html/advantages-block.html')
+
+</main>
+@@include('./html/footer.html')
