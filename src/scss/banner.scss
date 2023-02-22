@@ -64,8 +64,6 @@
                 }
             }
 
-          
-
             @media (max-width: 768px) {
                 flex-wrap: wrap;
             }
@@ -78,6 +76,14 @@
                 align-items: center;
                 justify-content: center;
                 text-align: center;
+                transition: all 0.3s ease 0s;
+
+                @media (any-hover: hover) {
+                    &:hover {
+                        color: $green;
+                        background-color: #fff;
+                    }
+                }
 
                 &:not(:has(a)) {
                     color: $green;
@@ -88,9 +94,9 @@
                     }
                 }
 
-                    @media (max-width: 768px) {
-                        margin-top: 7px;
-                    }
+                @media (max-width: 768px) {
+                    margin-top: 7px;
+                }
 
                 @media (min-width: 769px) {
                     @include adaptive-value("padding-inline", 20, 0, 1);

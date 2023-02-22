@@ -73,12 +73,14 @@ if (objectSlides.length) {
         }
     })
 
-    const bigImage = document.querySelector('.object__media-big img');
+    const bigImageLink = document.querySelector('.object__media-big a');
+    const bigImage = bigImageLink.querySelector('img');
     objectSlides.forEach(slide => {
         const img = slide.querySelector('img');
 
         img.addEventListener('click', function () {
             bigImage.src = img.src;
+            bigImageLink.href = img.src;
         })
     })
 }

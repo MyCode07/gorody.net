@@ -10,14 +10,16 @@
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
-    transform: translate3d(0, 200px, 0);
     transition: all 0.3s ease 0s;
 
     &._open {
         visibility: visible;
         opacity: 1;
         pointer-events: all;
-        transform: translate3d(0, 0, 0);
+
+        .popup__form-content {
+            transform: translate3d(0, 0, 0);
+        }
     }
 
     // .popup__form-body
@@ -39,6 +41,9 @@
         padding-bottom: 40px;
         padding-inline: 60px;
         position: relative;
+
+        transition: all 0.3s ease 0s;
+        transform: translate3d(0, 200px, 0);
 
         @media (max-width: 510px) {
             width: calc(100% - 30px);
@@ -111,11 +116,21 @@
         top: 20px;
         right: 20px;
 
+        @media (any-hover: hover) {
+            &:hover {
+                img,
+                svg {
+                    rotate: 180deg;
+                }
+            }
+        }
+
         img,
         svg {
             pointer-events: none;
             width: 20px;
             height: 20px;
+            transition: all 0.3s ease 0s;
         }
     }
 }

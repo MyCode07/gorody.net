@@ -82,6 +82,7 @@ section {
     align-items: center;
     color: #fff;
     font-weight: 500;
+    width: fit-content;
 
     img,
     svg {
@@ -275,6 +276,21 @@ section {
             }
         }
     }
+
+    // ._textblock-gallery-grid
+
+    &-gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        @include adaptive-value("gap", 40, 20, 1);
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
 }
 
 ._underline {
@@ -332,5 +348,52 @@ section {
 
     @media (max-width: 992px) {
         display: block;
+    }
+}
+
+.to-top {
+    position: fixed;
+    left: 30px;
+    bottom: 30px;
+    @include adaptive-value("width", 50, 30, 1);
+    @include adaptive-value("height", 50, 30, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0px 0px 4px 0px rgba($color: #000000, $alpha: 0.2);
+    border: 2px solid transparent;
+    transition: all 0.3s ease 0s;
+
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 8;
+
+    &._active {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            border-color: $green;
+        }
+    }
+
+    img,
+    svg {
+        width: 75%;
+        height: 75%;
+        display: block;
+        rotate: 90deg;
+    }
+
+    @media (max-width: 1024px) {
+        left: 15px;
+        bottom: 15px;
     }
 }
