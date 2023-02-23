@@ -80,7 +80,9 @@
             // .swiper-slide
 
             &-slide {
-                @include adaptive-value("max-width", 583, 290, 1);
+                @media (min-width: 426px) {
+                    @include adaptive-value("max-width", 583, 290, 1);
+                }
             }
         }
         .thumbnail {

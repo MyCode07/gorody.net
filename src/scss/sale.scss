@@ -23,7 +23,9 @@
             // .swiper-slide
 
             &-slide {
-                @include adaptive-value("max-width", 453.3, 290, 1);
+                @media (min-width: 426px) {
+                    @include adaptive-value("max-width", 453.3, 290, 1);
+                }
             }
         }
 

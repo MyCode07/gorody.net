@@ -14,4 +14,17 @@ if (burger) {
         menu.classList.remove('_open')
         body.classList.remove('_noscroll')
     })
+
+    const links = document.querySelectorAll('.menu__list nav a');
+    if (links.length) {
+        if (document.querySelector('.sale') || document.querySelector('.done')) {
+            links.forEach(link => {
+                link.addEventListener('click', function () {
+                    menu.classList.remove('_open')
+                    body.classList.remove('_noscroll')
+                })
+            })
+        }
+    }
 }
+

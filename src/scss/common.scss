@@ -218,11 +218,8 @@ section {
             }
         }
 
-        @media (max-width: 768px) {
-            & > :not(:last-child) {
-                margin-bottom: 30px;
-            }
-        }
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
 
     &:has(._textblock-images) {

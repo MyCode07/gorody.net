@@ -82,14 +82,13 @@
             }
 
             li {
-                a {
-                    @include adaptive-value("font-size", 18, 16, 1);
-                    font-weight: 400;
-                    color: #fff;
+                @include adaptive-value("font-size", 18, 16, 1);
+                font-weight: 400;
+                color: #fff;
 
-                    strong {
-                        font-weight: 600;
-                    }
+                a {
+                    font-weight: 500;
+                    color: currentColor
                 }
             }
         }
