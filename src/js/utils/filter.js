@@ -17,10 +17,10 @@ if (openFilter) {
     filterSearch.addEventListener('click', function () {
         openFilter.classList.remove('_open')
         filter.classList.remove('_open')
-        filter.classList.add('_result')
     })
 
     resetFilter.addEventListener('click', function () {
         filter.classList.remove('_result')
+        filter.classList.remove('_noresult')
     })
 }

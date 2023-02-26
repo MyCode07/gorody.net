@@ -112,6 +112,7 @@ section {
         font-weight: 500;
         @include adaptive-value("font-size", 22, 16, 1);
         color: $color;
+        @include adaptive-value("margin-bottom", 30, 20, 1);
     }
 
     // ._textblock-list

@@ -1,5 +1,3 @@
-
-
 .filter {
     @include adaptive-value("margin-bottom", 75, 50, 1);
     position: relative;
@@ -13,8 +11,20 @@
         }
     }
 
-    &._result{
-        .filter__reset{
+    &._result {
+        .filter__results,
+        .filter__reset {
+            display: block;
+        }
+
+        .post-list__bar {
+            display: flex;
+        }
+    }
+
+    &._noresult {
+        .filter__results,
+        .filter__reset {
             display: block;
         }
     }
@@ -210,10 +220,6 @@
         input {
             display: block;
             text-align: center;
-
-            &::placeholder {
-                color: $color;
-            }
         }
 
         div {
@@ -306,6 +312,8 @@
     // .filter__results
 
     &__results {
+        display: none;
+
         // .filter__results-count
 
         &-count {
@@ -316,7 +324,7 @@
             align-items: center;
             justify-content: center;
 
-            @media (max-width:768px){
+            @media (max-width: 768px) {
                 margin-top: 0;
                 max-width: 453.3px;
                 justify-content: space-between;
@@ -341,7 +349,7 @@
         margin-left: 60px;
         display: block;
 
-        @media (max-width:768px){
+        @media (max-width: 768px) {
             margin-left: 10px;
         }
 
@@ -361,6 +369,11 @@
         // .post-list__info
 
         &__info {
+        }
+
+        // .post-list__bar
+        &__bar {
+            display: none;
         }
     }
 }
