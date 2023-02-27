@@ -107,6 +107,28 @@
                             font-weight: 500;
                             color: #ffffff;
                             @include adaptive-value("font-size", 22, 10, 1);
+
+                            position: relative;
+
+                            @media (any-hover: hover) {
+                                &:hover {
+                                    &:after {
+                                        max-width: 100%;
+                                    }
+                                }
+                            }
+
+                            &:after {
+                                position: absolute;
+                                content: "";
+                                left: 0;
+                                bottom: -2px;
+                                height: 1px;
+                                width: 100%;
+                                max-width: 0;
+                                background-color: currentColor;
+                                transition: all 0.3s ease 0s;
+                            }
                         }
                     }
                 }
@@ -225,6 +247,28 @@
                             font-weight: 500;
                             color: #ffffff;
                             @include adaptive-value("font-size", 22, 10, 1);
+
+                            position: relative;
+
+                            @media (any-hover: hover) {
+                                &:hover {
+                                    &:after {
+                                        max-width: 100%;
+                                    }
+                                }
+                            }
+
+                            &:after {
+                                position: absolute;
+                                content: "";
+                                left: 0;
+                                bottom: -2px;
+                                height: 1px;
+                                width: 100%;
+                                max-width: 0;
+                                background-color: currentColor;
+                                transition: all 0.3s ease 0s;
+                            }
                         }
                     }
                 }

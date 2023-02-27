@@ -2,7 +2,7 @@ document.addEventListener('click', function (e) {
     let targetEl = e.target;
 
     if (targetEl.classList.contains('header__search')) {
-        document.querySelector('.search').classList.add('_open');
+        document.querySelector('.search__popup').classList.add('_open');
     }
 
 

@@ -1,7 +1,3 @@
-// import { IonRangeSliderEvent, IonRangeSliderOptions } from 'ion-rangeslider'
-// $("input[name='square-home']").ionRangeSlider();
-// <input type="text" name="square-home" value="" data-type="double" data-step="1" data-min="5" data-max="100" data-from="5" data-to="100" data-grid="true" />
-
 const openFilter = document.querySelector('.open-filter');
 
 if (openFilter) {
