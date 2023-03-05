@@ -118,6 +118,7 @@
 
     .image-map {
         @include adaptive-value("margin-top", 50, 30, 1);
+        height: 1000px;
 
         img {
             display: block;
