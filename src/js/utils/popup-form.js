@@ -26,6 +26,10 @@ document.addEventListener('click', function (e) {
     if (targetEl.classList.contains('popup__form-body') || targetEl.classList.contains('popup__form-close')) {
         targetEl.closest('.popup__form').classList.remove('_open')
     }
+
+    if (targetEl.classList.contains('plan__popup-close')) {
+        targetEl.closest('.plan__popup').classList.remove('_open')
+    }
 })
 
 

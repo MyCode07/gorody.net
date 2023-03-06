@@ -13,7 +13,8 @@
 
     &._result {
         .filter__results,
-        .filter__reset {
+        .filter__reset,
+        .post-list {
             display: block;
         }
 
@@ -27,6 +28,11 @@
         .filter__reset {
             display: block;
         }
+
+        .post-list{
+            display: none;
+        }
+
     }
 
     // .filter__top
