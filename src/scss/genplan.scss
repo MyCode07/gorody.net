@@ -237,3 +237,74 @@
     &-price {
     }
 }
+
+.plan__map {
+    overflow: hidden;
+
+    &:hover {
+        svg,
+        img {
+            transform: scale(1.5);
+        }
+    }
+
+    position: relative;
+    svg,
+    img {
+        width: 100%;
+        height: auto;
+        transition: all 0.3s ease 0s;
+    }
+
+    svg {
+        path {
+            opacity: 0.5;
+
+            &[data-partsale] {
+                cursor: pointer;
+            }
+
+            &[data-notsale] {
+                cursor: pointer;
+            }
+
+            &.tile.tile_in_sale,
+            &.purple,
+            &.blue,
+            &.green {
+                fill: #77ff65 !important;
+                cursor: pointer;
+
+                @media (any-hover: hover) {
+                    &:hover {
+                        stroke: #00ff00 !important;
+                        stroke-width: 3px !important;
+                    }
+                }
+            }
+
+            &.tile.tile_sold {
+                fill: #ff1b1b !important;
+            }
+
+            &.tile.tile_in_reserv,
+            &.tile_busy {
+                fill: #6ba5fb !important;
+                cursor: pointer;
+
+                @media (any-hover: hover) {
+                    &:hover {
+                        stroke: #00ff00 !important;
+                        stroke-width: 3px !important;
+                    }
+                }
+            }
+        }
+    }
+
+    img {
+        position: absolute;
+        z-index: -1;
+        pointer-events: none;
+    }
+}
