@@ -1,14 +1,14 @@
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.src = entry.target.dataset.src
+            entry.target.src = entry.target.dataset.src;
         }
     })
 })
 
-const previews = document.querySelectorAll('.preview');
-if (previews.length) {
-    previews.forEach(img => {
+const images = document.querySelectorAll('img.lazyload');
+if (images.length) {
+    images.forEach(img => {
         observer.observe(img)
     })
 }
