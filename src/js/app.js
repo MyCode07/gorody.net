@@ -6,6 +6,7 @@ import './utils/popup-form.js'
 import './utils/filter.js'
 import './utils/search.js'
 import './utils/lazyImages.js'
+import './utils/home-cards.js'
 
 
 
