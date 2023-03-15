@@ -9,4 +9,4 @@ import './utils/lazyImages.js'
 
 
 
-import './utils/genplan.js'
+// import './utils/genplan.js'

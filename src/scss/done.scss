@@ -128,7 +128,7 @@
 
             div {
                 display: flex;
-                align-items: center;
+                align-items: flex-end;
                 justify-content: space-between;
                 @include adaptive-value("padding-left", 30, 15, 1);
                 @include adaptive-value("padding-bottom", 20, 10, 1);
@@ -138,6 +138,7 @@
                     font-weight: 400;
                     color: #fff;
                     @include adaptive-value("font-size", 18, 14, 1);
+                    margin-right: 10px;
 
                     strong {
                         display: block;

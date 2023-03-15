@@ -16,6 +16,11 @@
         .filter__reset,
         .post-list {
             display: block;
+
+            &.list-kottedji,
+            &.list-kvartiri {
+                display: grid;
+            }
         }
 
         .post-list__bar {
@@ -29,10 +34,9 @@
             display: block;
         }
 
-        .post-list{
+        .post-list {
             display: none;
         }
-
     }
 
     // .filter__top
