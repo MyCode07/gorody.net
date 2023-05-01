@@ -12,7 +12,7 @@
     // .about__advantages
 
     &__advantages {
-        @include adaptive-value("margin-top", 112, 85, 1);
+        @include adaptive-value("margin-top", 150, 100, 1);
         @include adaptive-value("margin-bottom", 75, 50, 1);
 
         ol {
@@ -90,6 +90,8 @@
                 position: relative;
                 @include adaptive-value("padding", 40, 20, 1);
 
+                border-radius: 0 0 20px 20px;
+
                 @media (max-width: 768px) {
                     display: flex;
                     align-items: center;
@@ -165,7 +167,7 @@
     // .about__info
 
     &__info {
-        margin-bottom: 50px;
+        margin-bottom: 75px;
 
         @media (min-width: 769px) {
             display: flex;
@@ -181,6 +183,7 @@
 
             object-fit: cover;
             display: block;
+            border-radius: 20px;
 
             @media (max-width: 768px) {
                 width: 100%;
@@ -198,22 +201,21 @@
             }
 
             h4 {
-                @media (min-width: 769px) {
-                    display: flex;
-                }
+                display: flex;
+                flex-direction: column;
 
-                @media (max-width:768px){
-                    br{
+                @media (max-width: 768px) {
+                    br {
                         display: none;
                     }
                 }
 
-                text-transform: uppercase;
-
                 @include adaptive-value("margin-bottom", 40, 20, 1);
 
                 label {
+                    text-transform: uppercase;
                     @include adaptive-value("font-size", 30, 16, 1);
+                    margin-bottom: 0.5em;
 
                     @media (min-width: 769px) {
                         margin-right: 20px;

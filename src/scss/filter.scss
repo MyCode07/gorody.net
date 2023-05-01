@@ -101,6 +101,7 @@
     &__body {
         display: flex;
         background-color: $green;
+        border-radius: 20px;
 
         @media (min-width: 769px) {
             @include adaptive-value("padding-top", 25, 15, 1);
@@ -209,6 +210,7 @@
 
         select {
             -webkit-appearance: none;
+            border-radius: 10px;
 
             @include adaptive-value("padding-right", 30, 15, 1);
 
@@ -249,6 +251,15 @@
                 label {
                     width: calc(50% - 10px);
                 }
+            }
+        }
+
+        label {
+            border-radius: 10px;
+
+            input,
+            select {
+                border-radius: 0 10px 10px 0;
             }
         }
 
@@ -300,6 +311,7 @@
         font-weight: 600;
         text-align: center;
         color: #ffffff;
+        border-radius: 10px;
 
         @media (min-width: 993px) {
             align-self: flex-end;
@@ -371,6 +383,22 @@
     }
 
     .post-list {
+        & > :not(:last-child) {
+            @media (min-width: 769px) {
+                margin-bottom: 10px;
+            }
+        }
+
+        li {
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            ._submit {
+                border-radius: 0;
+            }
+        }
+
         // .post-list__img
 
         &__img {

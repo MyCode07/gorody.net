@@ -91,11 +91,11 @@
                 width: 100%;
                 position: relative;
                 @include adaptive-value("padding", 40, 20, 1);
+                border-radius: 0 0 20px 20px;
 
-                @media (max-width:768px){
+                @media (max-width: 768px) {
                     display: flex;
                     align-items: center;
-                    
                 }
 
                 span {
@@ -144,7 +144,6 @@
                             width: 700px;
                             right: 0;
                             transform: translate(100%, 0);
-
                         }
                     }
                 }
@@ -175,7 +174,7 @@
             object-fit: cover;
             display: block;
 
-            @media (max-width:768px){
+            @media (max-width: 768px) {
                 object-position: right;
             }
         }

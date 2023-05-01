@@ -37,6 +37,12 @@
 
             display: flex;
             flex-direction: column;
+            border-radius: 20px;
+            overflow: hidden;
+
+            @media (max-width:768px){
+                border-radius: 10px;
+            }
 
             .thumbnail {
                 position: absolute;

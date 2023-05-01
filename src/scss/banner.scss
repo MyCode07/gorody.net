@@ -54,6 +54,10 @@
 
             @media (max-width: 768px) {
                 flex-wrap: wrap;
+
+                & > :nth-child(2n) {
+                    border-radius: 10px 0 0 10px;
+                }
             }
 
             li {
@@ -65,6 +69,7 @@
                 justify-content: center;
                 text-align: center;
                 transition: all 0.3s ease 0s;
+                border-radius: 10px 10px 0 0;
 
                 @media (any-hover: hover) {
                     &:hover {
@@ -84,6 +89,7 @@
 
                 @media (max-width: 768px) {
                     margin-top: 7px;
+                    border-radius: 0 10px 10px 0;
                 }
 
                 @media (min-width: 769px) {

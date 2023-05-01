@@ -18,6 +18,7 @@
             object-position: center;
             width: 100%;
             @include adaptive-value("height", 600, 400, 1);
+            border-radius: 20px;
         }
     }
 }

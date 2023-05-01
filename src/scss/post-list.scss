@@ -124,6 +124,8 @@
         align-items: center;
         @include adaptive-value("padding", 20, 15, 1);
         background-color: $background;
+        border-radius: 10px;
+        margin-bottom: 10px;
 
         span {
             display: block;
@@ -203,6 +205,16 @@
                     }
                 }
             }
+        }
+    }
+}
+
+.uchastki,
+.kotedj {
+    .post-list {
+        li {
+            border-radius: 20px !important;
+            overflow: hidden;
         }
     }
 }

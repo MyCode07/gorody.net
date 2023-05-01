@@ -271,6 +271,7 @@ section {
             img {
                 width: 100%;
                 max-width: 300px;
+                border-radius: 10px;
             }
         }
     }
@@ -316,6 +317,7 @@ section {
 }
 
 ._submit {
+    border-radius: 10px;
     background: $green;
     width: fit-content;
     display: flex;
