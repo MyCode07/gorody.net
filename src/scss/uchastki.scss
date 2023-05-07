@@ -7,6 +7,24 @@
     // .uchastki__body
 
     &__body {
+        & > h4,
+        & > h5,
+        & > h6 {
+            @include adaptive-value("font-size", 30, 16, 1);
+
+            span {
+                @include adaptive-value("font-size", 22, 16, 1);
+            }
+        }
+
+        & > p {
+            @include adaptive-value("font-size", 22, 16, 1);
+            font-weight: 400;
+        }
+
+        & > a {
+            color: $green;
+        }
     }
 
     // .uchastki__flex
@@ -25,5 +43,62 @@
                 font-weight: 600;
             }
         }
+    }
+
+    ul,
+    ol {
+        &:not(.post-list) {
+            padding-left: 30px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            max-width: 650px;
+
+            @media (max-width: 768px) {
+                max-width: none;
+                padding-left: 0;
+            }
+
+            & > :not(:last-child) {
+                @include adaptive-value("margin-bottom", 15, 10, 1);
+            }
+
+            li {
+                display: flex;
+                @include adaptive-value("font-size", 20, 14, 1);
+                font-weight: 400;
+                color: $color;
+
+                &:before {
+                    content: "";
+                    display: block;
+                    flex-grow: 0;
+                    flex-shrink: 0;
+
+                    background-image: url("/wp-content/themes/gorody-net/assets/img/svg/ok.svg");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    @include adaptive-value("width", 20, 10, 1);
+                    @include adaptive-value("flex-basis", 20, 10, 1);
+                    @include adaptive-value("height", 30, 15, 1);
+
+                    @include adaptive-value("margin-right", 20, 10, 1);
+                }
+
+                strong {
+                    padding-right: 0.5em;
+                }
+            }
+        }
+    }
+
+    h2,
+    h3 {
+        font-weight: 500;
+        @include adaptive-value("font-size", 30, 20, 1);
+        margin-bottom: 1em;
+        text-transform: uppercase;
+        color: $color;
+        margin-bottom: 30px;
     }
 }

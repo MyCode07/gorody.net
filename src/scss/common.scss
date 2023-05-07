@@ -324,6 +324,7 @@ section {
     align-items: center;
     justify-content: center;
     margin-top: 30px;
+    margin-bottom: 50px;
     margin-inline: auto;
     padding: 0 20px;
     @include adaptive-value("height", 60, 40, 1);
@@ -335,6 +336,11 @@ section {
     @include adaptive-value("font-size", 22, 16, 1);
     font-weight: 500;
     color: #ffffff;
+}
+
+.post-list ._submit {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .open-characteristics {

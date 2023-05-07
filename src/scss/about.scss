@@ -7,6 +7,80 @@
     // .about__body
 
     &__body {
+        & > h4,
+        & > h5,
+        & > h6 {
+            @include adaptive-value("font-size", 30, 16, 1);
+
+            span {
+                @include adaptive-value("font-size", 22, 16, 1);
+            }
+        }
+
+        & > p {
+            @include adaptive-value("font-size", 22, 16, 1);
+            font-weight: 400;
+        }
+
+        & > a {
+            color: $green;
+        }
+
+        & > h2,
+        & > h3 {
+            font-weight: 500;
+            @include adaptive-value("font-size", 30, 20, 1);
+            margin-bottom: 1em;
+            text-transform: uppercase;
+            color: $color;
+        }
+
+        & > ul,
+        & > ol {
+            &:not(.post-list) {
+                padding-left: 30px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                max-width: 650px;
+
+                @media (max-width: 768px) {
+                    max-width: none;
+                    padding-left: 0;
+                }
+
+                & > :not(:last-child) {
+                    @include adaptive-value("margin-bottom", 15, 10, 1);
+                }
+
+                li {
+                    display: flex;
+                    @include adaptive-value("font-size", 20, 14, 1);
+                    font-weight: 400;
+                    color: $color;
+
+                    &:before {
+                        content: "";
+                        display: block;
+                        flex-grow: 0;
+                        flex-shrink: 0;
+
+                        background-image: url("/wp-content/themes/gorody-net/assets/img/svg/ok.svg");
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        @include adaptive-value("width", 20, 10, 1);
+                        @include adaptive-value("flex-basis", 20, 10, 1);
+                        @include adaptive-value("height", 30, 15, 1);
+
+                        @include adaptive-value("margin-right", 20, 10, 1);
+                    }
+
+                    strong {
+                        padding-right: 0.5em;
+                    }
+                }
+            }
+        }
     }
 
     // .about__advantages
@@ -166,27 +240,39 @@
 
     // .about__info
 
-    &__info {
-        margin-bottom: 75px;
-
-        @media (min-width: 769px) {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+    &__info,
+    .is-layout-flex {
+        @media (max-width: 768px) {
+            flex-direction: column !important;
         }
 
-        img {
-            @media (min-width: 769px) {
-                @include adaptive-value("width", 450, 230, 1);
-                height: 360px;
-            }
+        h4,
+        h5,
+        h6 {
+            @include adaptive-value("font-size", 30, 16, 1);
 
+            span {
+                @include adaptive-value("font-size", 22, 16, 1);
+            }
+        }
+
+        p {
+            @include adaptive-value("font-size", 22, 16, 1);
+            font-weight: 400;
+        }
+
+        a {
+            color: $green;
+        }
+
+        figure,
+        img {
+            width: 100%;
             object-fit: cover;
             display: block;
             border-radius: 20px;
 
             @media (max-width: 768px) {
-                width: 100%;
                 @include adaptive-value("height", 360, 170, 1);
                 @include adaptive-value("margin-bottom", 20, 10, 1);
             }
@@ -195,52 +281,11 @@
         div {
             color: $color;
             font-weight: 500;
-
-            @media (min-width: 769px) {
-                @include adaptive-value("padding-left", 40, 0, 1);
-            }
-
-            h4 {
-                display: flex;
-                flex-direction: column;
-
-                @media (max-width: 768px) {
-                    br {
-                        display: none;
-                    }
-                }
-
-                @include adaptive-value("margin-bottom", 40, 20, 1);
-
-                label {
-                    text-transform: uppercase;
-                    @include adaptive-value("font-size", 30, 16, 1);
-                    margin-bottom: 0.5em;
-
-                    @media (min-width: 769px) {
-                        margin-right: 20px;
-                    }
-                }
-
-                span {
-                    @include adaptive-value("font-size", 22, 16, 1);
-                }
-            }
-
-            p {
-                @include adaptive-value("font-size", 22, 16, 1);
-                font-weight: 400;
-            }
         }
 
         &._reverse {
             @media (min-width: 769px) {
-                flex-direction: row-reverse;
-
-                div {
-                    padding-left: 0 !important;
-                    @include adaptive-value("padding-right", 40, 0, 1);
-                }
+                flex-direction: row-reverse !important;
             }
         }
     }
