@@ -51,6 +51,8 @@ if (saleSliders.length) {
 }
 
 const objectSlides = document.querySelectorAll('.object__media-slider .swiper-slide');
+const bigImageLink = document.querySelector('.object__media-big a');
+const bigImage = bigImageLink.querySelector('img');
 
 if (objectSlides.length) {
     new Swiper('.object__media-slider .swiper', {
@@ -70,17 +72,14 @@ if (objectSlides.length) {
             769: {
                 spaceBetween: 10,
             }
+        },
+        on: {
+            slideChange: (swiper) => {
+                const image = swiper.slides[swiper.activeIndex].querySelector('img');
+
+                bigImage.src = image.dataset.src;
+                bigImageLink.href = image.dataset.src;
+            }
         }
-    })
-
-    const bigImageLink = document.querySelector('.object__media-big a');
-    const bigImage = bigImageLink.querySelector('img');
-    objectSlides.forEach(slide => {
-        const img = slide.querySelector('img');
-
-        img.addEventListener('click', function () {
-            bigImage.src = img.src;
-            bigImageLink.href = img.src;
-        })
     })
 }

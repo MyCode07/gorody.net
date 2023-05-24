@@ -253,8 +253,7 @@ input[type="search"]::-webkit-search-results-decoration {
         justify-content: space-between;
         align-items: center;
         max-width: 1100px;
-        border: 1px solid $green;
-        padding-left: 15px !important;
+        padding-left: 0 !important;
 
         @media (max-width: 768px) {
             height: 45px;
@@ -263,15 +262,22 @@ input[type="search"]::-webkit-search-results-decoration {
         label {
             display: flex;
             align-items: center;
+            flex: 1 1 auto;
+            height: 100%;
         }
 
         input {
+            height: 100%;
             &:not([type="submit"]) {
+                border-radius: 10px 0 0 10px;
+                border: 1px solid $green;
+
                 color: $color;
                 font-weight: 400;
                 display: block !important;
                 flex: 1 1 auto;
                 height: 100% !important;
+                border: 1px solid none !important;
 
                 @media (min-width: 1441px) {
                     padding-inline: 20px !important;
@@ -287,10 +293,6 @@ input[type="search"]::-webkit-search-results-decoration {
                     padding-inline: 10px !important;
                     font-size: 16px !important;
                 }
-
-                @media (max-width: 375px) {
-                    max-width: 187px;
-                }
             }
         }
 
@@ -298,12 +300,13 @@ input[type="search"]::-webkit-search-results-decoration {
         input[type="submit"] {
             position: static !important;
             @include adaptive-value("padding-inline", 15, 10, 1);
-            height: 40px;
+            height: 100%;
             color: #fff;
             background-color: $green;
             font-weight: 500 !important;
             cursor: pointer;
             transition: all 0.3s ease 0s;
+            border-radius: 0 10px 10px 0;
 
             @media (any-hover: hover) {
                 &:hover {

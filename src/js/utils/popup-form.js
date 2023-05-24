@@ -23,7 +23,11 @@ document.addEventListener('click', function (e) {
         }
     }
 
+
     if (targetEl.classList.contains('popup__form-body') || targetEl.classList.contains('popup__form-close')) {
+        const output = targetEl.closest('.popup__form').querySelector('.wpcf7-response-output');
+        if (output) output.classList.add('_close');
+
         targetEl.closest('.popup__form').classList.remove('_open')
     }
 
@@ -37,7 +41,8 @@ document.addEventListener('click', function (e) {
 // собития формы
 document.addEventListener('wpcf7submit', function (event) {
     const inputs = event.detail.inputs
-    const form = event.path[0];
+    const form = event.target;
+
     form.querySelector('.wpcf7-response-output').classList.remove('_close');
 
     inputs.forEach(inp => {
