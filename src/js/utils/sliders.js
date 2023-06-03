@@ -27,7 +27,7 @@ if (saleSliders.length) {
 
 const doneSliders = document.querySelectorAll('.done__slider .swiper-slide');
 
-if (saleSliders.length) {
+if (doneSliders.length) {
     new Swiper('.done__slider .swiper', {
         modules: [
             Navigation
@@ -51,10 +51,11 @@ if (saleSliders.length) {
 }
 
 const objectSlides = document.querySelectorAll('.object__media-slider .swiper-slide');
-const bigImageLink = document.querySelector('.object__media-big a');
-const bigImage = bigImageLink.querySelector('img');
+
 
 if (objectSlides.length) {
+    const bigImageLink = document.querySelector('.object__media-big a');
+    const bigImage = bigImageLink.querySelector('img');
     new Swiper('.object__media-slider .swiper', {
         modules: [
             Navigation
